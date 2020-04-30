@@ -1,6 +1,7 @@
 node_modules/
-.exercism/
 .eslintrc
 babel.config.js
 package-lock.json
 package.json
+.DS_Store
+.exercism/
