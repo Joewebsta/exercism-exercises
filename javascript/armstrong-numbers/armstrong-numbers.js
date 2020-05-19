@@ -1,8 +1,9 @@
-//
-// This is only a SKELETON file for the 'Armstrong numbers' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
-export const isArmstrongNumber = () => {
-  throw new Error("Remove this statement and implement this function");
-};
+export const isArmstrongNumber = (num) => {
+  const numArr = String(num).split('');
+  
+  const armstrongNum = numArr.reduce((sum, current) => {
+    return sum + Number(current) ** numArr.length;
+  }, 0)
+  
+  return (num === armstrongNum);
+  };
