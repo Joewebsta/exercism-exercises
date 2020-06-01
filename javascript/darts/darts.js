@@ -1,22 +1,8 @@
-function isOnInner(x, y) {
-  return (x ** 2) + (y ** 2) <= 1; 
-}
-
-function isOnMiddle(x, y) {
-  return (x ** 2) + (y ** 2) > 1 && (x ** 2) + (y ** 2) <= 25;
-}
-
-function isOnOuter(x, y) {
-  return (x ** 2) + (y ** 2) > 25 && (x ** 2) + (y ** 2) <= 100;
-}
-
 export const score = (x, y) => {
-  x = Math.abs(x);
-  y = Math.abs(y);
+  const r = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
 
-  if (isOnInner(x, y))  { return 10; }
-  if (isOnMiddle(x, y)) { return 5; }
-  if (isOnOuter(x, y))  { return 1; }
-
-  return 0;  
+  if (r <= 1) { return 10 };
+  if (r <= 5) { return 5 };
+  if (r <= 10) { return 1 };
+  return 0;
 };
