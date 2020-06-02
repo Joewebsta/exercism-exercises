@@ -1,8 +1,13 @@
-//
-// This is only a SKELETON file for the 'Gigasecond' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+// export const gigasecond = (date) => {
+//   const newDate = date.setSeconds(date.getSeconds() + 1e9);
+//   return new Date(newDate);
+// };
 
-export const gigasecond = () => {
-  throw new Error("Remove this statement and implement this function");
+// export const gigasecond = (date) => {
+//   let time = date.setSeconds(date.getSeconds() + 1000000000);
+//   return new Date(time);
+// };
+
+export const gigasecond = (date) => {
+  return new Date(date.getTime() + 1e12);
 };
